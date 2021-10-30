@@ -22,6 +22,10 @@ function __heirMapUpdate()
 }
 function __heirMapClear()
 {
+	for ( var i=0; i<ds_list_size(global.__heirMap); i++ )
+	{	
+		ds_list_destroy(global.__heirMap[|i].__heirs);
+	}
 	ds_list_clear(global.__heirMap);	
 }
 
