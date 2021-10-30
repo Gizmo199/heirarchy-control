@@ -1,0 +1,1 @@
+heir_add(obj_two);
