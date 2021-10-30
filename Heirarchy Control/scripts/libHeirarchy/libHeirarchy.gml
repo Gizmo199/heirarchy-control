@@ -14,7 +14,7 @@ function __heirMapUpdate()
 					
 					x = other.x - dcos(d1) * d2;
 					y = other.y + dsin(d1) * d2;
-					image_angle = other.image_angle;
+					image_angle = other.image_angle + image_angle_heir;
 				}
 			}
 		}
@@ -43,6 +43,7 @@ function heir_add_to(obj)
 			global.__heirMap[| ds_list_size(global.__heirMap)] = obj;
 		}
 	}
+	image_angle_heir = image_angle;
 	__heritagePos = ds_list_size(obj.__heirs);
 	obj.__heirs[| ds_list_size(obj.__heirs)] = id;
 }
