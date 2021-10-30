@@ -54,7 +54,6 @@ function heir_remove_from(obj)
 	with ( obj )
 	{
 		ds_list_delete(__heirs, other.__heritagePos);
-		if ( ds_list_size(__heirs) < 1 ) ds_list_destroy(__heirs);
 	}
 }
 function heir_remove(obj)
